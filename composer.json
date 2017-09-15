@@ -1,0 +1,60 @@
+{
+    "name": "cambricorp/monarch",
+    "description": "Laravel:  Run migrations from modular or nested applications",
+    "keywords": [
+        "laravel",
+        "monarch",
+        "modular",
+        "module",
+        "modules",
+        "nested",
+        "migrations"
+    ],
+    "homepage": "https://bitbucket.org/cambricorp/monarch.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Carl Price",
+            "email": "cambricorp@gmail.com"
+        }
+    ],
+   "repositories": {
+        "cambricorp/monarch": {
+            "type":"vcs",
+            "url": "https://github.com/cambricorp/monarch.git"
+        }
+    },
+    "require": {
+        "php" : ">=7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monarch\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "fzaninotto/faker": "~1.4",
+            "mockery/mockery": "0.9.*",
+            "phpunit/phpunit": "~6.0"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Monarch\\Providers\\MonarchServiceProvider"
+            ]
+        },
+        "branch-alias": {
+            "dev-master": "5.5.x-dev"
+        }
+    }
+}
